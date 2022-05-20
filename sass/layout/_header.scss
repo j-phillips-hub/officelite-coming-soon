@@ -1,0 +1,77 @@
+@use './breakpoints' as mix;
+
+.header__grid {
+  background: url('/assets/home/bg-pattern-header.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-position-y: -95px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding: 2.875rem 1.5rem;
+
+  @include mix.breakpoint(med) {
+    text-align: left;
+    background-position-x: 400px;
+    background-position-y: -105px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1.875rem 31.25rem;
+    place-items: initial;
+    align-items: center;
+    padding: 4.5rem 2.5rem 0 2.5rem;
+  }
+
+  @include mix.breakpoint(lrg) {
+    padding: 5.0625rem 10.3125rem 0 10.3125rem;
+    // align-items: initial;
+  }
+
+  &-logo {
+    width: 9.6875rem;
+    height: 1.875rem;
+
+    @include mix.breakpoint(med) {
+      grid-column: 1 / 2;
+      grid-row: 1/ 2;
+    }
+  }
+
+  &-graph {
+    margin-top: 5rem;
+    max-width: 100%;
+    height: auto;
+
+    @include mix.breakpoint(med) {
+      grid-column: 2 / -1;
+      grid-row: 2 / 3;
+      margin-top: 0;
+      margin-left: 2.125rem; 
+      margin-top: 35px;
+    }
+
+    @include mix.breakpoint(lrg) {
+      margin-left: 3.125rem; 
+      margin-top: 130px;
+    }
+  }
+
+  .cta {
+    margin-top: 4rem;
+    max-width: 33.75rem;
+
+    .cta__descrip {margin: 1.5rem 0;}
+
+    @include mix.breakpoint(med) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin-top: 0;
+    }
+
+    @include mix.breakpoint(lrg) {
+      margin-top: 100px;
+    }
+  }
+}
+
+

@@ -1,0 +1,74 @@
+@use '../layout/breakpoints' as mix;
+
+.countdown {
+  text-align: center;
+  padding-top: 907px;
+  padding-bottom: 100px;
+  max-width: 1265px;
+  margin: 0 auto;
+
+  @include mix.breakpoint(med) {
+    padding-top: 655px;
+  }
+
+  @include mix.breakpoint(lrg) {
+    padding-top: 397px;
+    padding-bottom: 1.5rem;
+  }
+
+  &__flex {
+    @include mix.breakpoint(lrg) {
+      padding: 2rem 5.4375rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .btn {
+        width: 10.9375rem;
+        height: 3.4375rem;
+      }
+    }
+  }
+
+  &__release {
+    font-size: 1rem;
+    letter-spacing: 5px;
+
+    &--light {
+      color: var(--clr-white);
+    }
+
+    &--dark {
+      color: var(--clr-accent);
+    }
+  }
+
+  .countdown-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.125rem 0 2.25rem;
+
+    .countdown-card {
+      background-color: var(--clr-headers);
+      padding: 0.6875rem 1.125rem;
+
+      &__num {
+        font-weight: 700;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+
+        &--light {
+          color: var(--clr-white);
+        }
+      }
+
+      &__text {
+        color: var(--cl-white);
+        font-weight: 700;
+        font-size: clamp(0.75rem, 2vw, 1rem);
+        opacity: 0.5;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use '../layout/breakpoints' as mix;
+
+.sub-card {
+  background-color: var(--clr-white);
+  color: var(--clr-headers);
+  text-align: center;
+  padding: 2.5rem 3.3125rem;
+  border-radius: 13px;
+  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+  min-width: 20rem;
+  max-width: 43.0625rem;
+  margin: 0 auto;
+  margin-bottom: 32px;
+
+  @include mix.breakpoint(med) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mix.breakpoint(lrg) {
+    display: initial;
+    // padding: 2.5rem 4.6875rem;
+    margin-bottom: 0;
+  }
+
+  &__version {font-size: 1.25rem;}
+
+  &__bill {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+
+    &-price {font-size: 3.5rem;}
+
+    @include mix.breakpoint(med) {grid-column: 1 / 2;}
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 3.5rem 0 2rem;
+
+    @include mix.breakpoint(med) {grid-column: 2 / 3;}
+  }
+}
+
+.sub-card--pro {
+  color: var(--clr-white-opac);
+  background-color: var(--clr-accent);
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 355px;
+  }
+
+  &__version {color: var(--clr-white);}
+
+  &__bill-price {color: var(--clr-white);}
+}

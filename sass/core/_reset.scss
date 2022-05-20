@@ -1,0 +1,38 @@
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Box sizing rules / Remove default margin  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {text-decoration-skip-ink: auto;}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {font: inherit;}
+
+body {
+  background-color: var(--clr-body-bg);
+  color: var(--clr-body);
+  font-family: "Kumbh Sans";
+  font-size: 1rem;
+}

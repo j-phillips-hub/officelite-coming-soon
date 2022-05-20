@@ -1,0 +1,31 @@
+@use './breakpoints' as mix;
+
+.sub-container {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 500;
+  @include mix.breakpoint(med) {
+    padding: 3.75rem 2.5rem 6.25rem;
+  }
+
+  @include mix.breakpoint(lrg) {
+    display: flex;
+    padding: 10.625rem 10.3125rem 5.125rem;
+    justify-content: center;
+    gap: 1.875rem;
+  }
+}
+
+.sub-card {
+  .btn {
+    @include mix.breakpoint(med) {
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    @include mix.breakpoint(lrg) {
+      width: initial;
+      margin: initial;
+    }
+  }
+}

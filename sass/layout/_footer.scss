@@ -1,0 +1,23 @@
+@use './breakpoints' as mix;
+
+.footer-bg {
+  background: url("/assets/home/bg-pattern-footer.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 8.375rem;
+  background-position-x: center;
+  background-color: var(--clr-dark);
+  margin-top: -865px;
+
+  @include mix.breakpoint(med) {
+    margin-top: -688px;
+    background-size: contain;
+  }
+
+  @include mix.breakpoint(lrg) {
+    margin-top: -400px;
+    background-size: cover;
+    background-position-y: -120px;
+    background-position-x: -400px;
+  }
+}
