@@ -49,6 +49,7 @@
   color: var(--clr-white-opac);
   background-color: var(--clr-accent);
   position: relative;
+  overflow: hidden;
 
   &__bg {
     position: absolute;
@@ -56,6 +57,12 @@
     left: 0;
     right: 0;
     width: 355px;
+
+    @include mix.breakpoint(med) {
+      width: 700px;
+      top: -170px;
+      left: -145px;
+    }
   }
 
   &__version {color: var(--clr-white);}

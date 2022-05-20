@@ -161,6 +161,11 @@ a:active {
   margin: 0 auto;
 }
 
+.img {
+  width: 100%;
+  height: auto;
+}
+
 .sub-card {
   background-color: var(--clr-white);
   color: var(--clr-headers);
@@ -218,6 +223,7 @@ a:active {
   color: var(--clr-white-opac);
   background-color: var(--clr-accent);
   position: relative;
+  overflow: hidden;
 }
 .sub-card--pro__bg {
   position: absolute;
@@ -225,6 +231,13 @@ a:active {
   left: 0;
   right: 0;
   width: 355px;
+}
+@media screen and (min-width: 48em) {
+  .sub-card--pro__bg {
+    width: 700px;
+    top: -170px;
+    left: -145px;
+  }
 }
 .sub-card--pro__version {
   color: var(--clr-white);
@@ -299,11 +312,7 @@ a:active {
 }
 
 .header__grid {
-  background: url("assets/home/bg-pattern-header.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center, center;
-  background-position-y: -95px;
+  position: relative;
   text-align: center;
   display: grid;
   place-items: center;
@@ -312,8 +321,6 @@ a:active {
 @media screen and (min-width: 48em) {
   .header__grid {
     text-align: left;
-    background-position-x: 400px;
-    background-position-y: -105px;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1.875rem 31.25rem;
     place-items: initial;
@@ -324,6 +331,26 @@ a:active {
 @media screen and (min-width: 65.625em) {
   .header__grid {
     padding: 5.0625rem 10.3125rem 0 10.3125rem;
+  }
+}
+.header__grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1134px;
+  z-index: -500;
+}
+@media screen and (min-width: 48em) {
+  .header__grid-bg {
+    top: -250px;
+    left: 300px;
+  }
+}
+@media screen and (min-width: 65.625em) {
+  .header__grid-bg {
+    top: -500px;
+    left: 650px;
   }
 }
 .header__grid-logo {

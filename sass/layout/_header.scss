@@ -1,11 +1,7 @@
 @use './breakpoints' as mix;
 
 .header__grid {
-  background: url('assets/home/bg-pattern-header.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center, center;
-  background-position-y: -95px;
+  position: relative;
   text-align: center;
   display: grid;
   place-items: center;
@@ -13,8 +9,6 @@
 
   @include mix.breakpoint(med) {
     text-align: left;
-    background-position-x: 400px;
-    background-position-y: -105px;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1.875rem 31.25rem;
     place-items: initial;
@@ -24,6 +18,25 @@
 
   @include mix.breakpoint(lrg) {
     padding: 5.0625rem 10.3125rem 0 10.3125rem;
+  }
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1134px;
+    z-index: -500;
+
+    @include mix.breakpoint(med) {
+      top: -250px;
+      left: 300px;
+    }
+
+    @include mix.breakpoint(lrg) {
+      top: -500px;
+      left: 650px;
+    }
   }
 
   &-logo {
