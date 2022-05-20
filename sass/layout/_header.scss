@@ -1,7 +1,7 @@
 @use './breakpoints' as mix;
 
 .header__grid {
-  background: url('/assets/home/bg-pattern-header.svg');
+  background: url('.../assets/home/bg-pattern-header.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center, center;
@@ -24,7 +24,6 @@
 
   @include mix.breakpoint(lrg) {
     padding: 5.0625rem 10.3125rem 0 10.3125rem;
-    // align-items: initial;
   }
 
   &-logo {
