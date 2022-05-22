@@ -3,22 +3,23 @@
 .sub-card {
   background-color: var(--clr-white);
   color: var(--clr-headers);
+  max-width: 43.0625rem;
+  min-width: 20rem;
   text-align: center;
   padding: 2.5rem 3.3125rem;
-  border-radius: 13px;
-  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
-  min-width: 20rem;
-  max-width: 43.0625rem;
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
+  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
 
   @include mix.breakpoint(med) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    text-align: left;
   }
 
   @include mix.breakpoint(lrg) {
     display: initial;
+    text-align: center;
     margin-bottom: 0;
   }
 
@@ -46,23 +47,24 @@
 }
 
 .sub-card--pro {
-  color: var(--clr-white-opac);
+  background: url('/assets/home/bg-pattern-pricing.svg');
+  background-repeat: no-repeat;
+  background-size: 267%;
+  background-position-y: -365px;
+  background-position-x: -271px;
   background-color: var(--clr-accent);
-  position: relative;
-  overflow: hidden;
+  color: var(--clr-white-opac);
 
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 355px;
+  @include mix.breakpoint(med) {
+    background-size: 109%;
+    background-position-y: -199px;
+    background-position-x: -251px;
+  }
 
-    @include mix.breakpoint(med) {
-      width: 700px;
-      top: -170px;
-      left: -145px;
-    }
+  @include mix.breakpoint(lrg) {
+    background-size: 270%;
+    background-position-y: -346px;
+    background-position-x: -272px;
   }
 
   &__version {color: var(--clr-white);}

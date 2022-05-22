@@ -6,26 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <title>Officelite</title>
+  <!-- External Styles -->
   <link rel="stylesheet" href="./dist/main.css">
+  <!-- External JS -->
   <script defer src="main.js"></script>
 </head>
 
 <body>
   <header class="header__grid container">
-    <img class="header__grid-bg" src="./assets/home/bg-pattern-header.svg" alt="">
     <img class="header__grid-logo" src="./assets/shared/logo.svg" alt="">
-
-    <img class="header__grid-graph img" src="./assets/home/illustration-charts.svg" alt="">
+    <img class="header__grid-graph" src="./assets/home/illustration-charts.svg" alt="">
 
     <div class="cta">
       <h1 class="cta__header">A simple solution to complex tasks is coming soon</h1>
-
       <p class="cta__descrip">
         Say goodbye to inefficient juggling of multiple apps, teams, and projects.
-        Officelite is the new collaboration platform built with an intuitive
-        interface to improve productivity.
+        Officelite is the new collaboration platform built with an intuitive interface to improve productivity.
       </p>
-
       <a class="btn btn-md btn-dark br-28" href="./html-pages/sign-up.html">Get Started</a>
     </div>
   </header>
@@ -50,8 +47,6 @@
       </section>
 
       <section class="sub-card sub-card--pro br-13">
-        <img class="sub-card--pro__bg img" src="./assets/home/bg-pattern-pricing.svg" alt="">
-
         <h4 class="sub-card__version sub-card--pro__version">Pro</h4>
 
         <div class="sub-card__bill">
@@ -98,22 +93,22 @@
 
           <div class="countdown-card-wrapper">
             <div class="countdown-card countdown-card--dark br-13">
-              <div class="countdown-card__num countdown-card__num--light">47</div>
+              <div id="daysLeft" class="countdown-card__num countdown-card__num--light"></div>
               <p class="countdown-card__text">Days</p>
             </div>
-    
+
             <div class="countdown-card countdown-card--dark br-13">
-              <div class="countdown-card__num countdown-card__num--light">07</div>
+              <div id="hoursLeft" class="countdown-card__num countdown-card__num--light"></div>
               <p class="countdown-card__text">Hours</p>
             </div>
-    
+
             <div class="countdown-card countdown-card--dark br-13">
-              <div class="countdown-card__num countdown-card__num--light">56</div>
+              <div id="minLeft" class="countdown-card__num countdown-card__num--light"></div>
               <p class="countdown-card__text">Min</p>
             </div>
-    
+
             <div class="countdown-card countdown-card--dark br-13">
-              <div class="countdown-card__num countdown-card__num--light">14</div>
+              <div id="secLeft" class="countdown-card__num countdown-card__num--light"></div>
               <p class="countdown-card__text">Sec</p>
             </div>
           </div>

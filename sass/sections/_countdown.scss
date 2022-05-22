@@ -1,27 +1,25 @@
 @use '../layout/breakpoints' as mix;
 
 .countdown {
-  text-align: center;
-  padding-top: 907px;
-  padding-bottom: 100px;
   max-width: 1265px;
+  text-align: center;
+  padding-top: 56.6875rem;
+  padding-bottom: 6.25rem;
   margin: 0 auto;
 
-  @include mix.breakpoint(med) {
-    padding-top: 655px;
-  }
+  @include mix.breakpoint(med) {padding-top: 40.9375rem;}
 
   @include mix.breakpoint(lrg) {
-    padding-top: 397px;
+    padding-top: 24.8125rem;
     padding-bottom: 1.5rem;
   }
 
   &__flex {
     @include mix.breakpoint(lrg) {
-      padding: 2rem 5.4375rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 2rem 5.4375rem;
 
       .btn {
         width: 10.9375rem;
@@ -32,15 +30,11 @@
 
   &__release {
     font-size: 1rem;
-    letter-spacing: 5px;
+    letter-spacing: 0.3125rem;
 
-    &--light {
-      color: var(--clr-white);
-    }
+    &--light {color: var(--clr-white);}
 
-    &--dark {
-      color: var(--clr-accent);
-    }
+    &--dark {color: var(--clr-accent);}
   }
 
   .countdown-card-wrapper {
@@ -58,9 +52,7 @@
         font-weight: 700;
         font-size: clamp(2rem, 5vw, 3.5rem);
 
-        &--light {
-          color: var(--clr-white);
-        }
+        &--light {color: var(--clr-white);}
       }
 
       &__text {

@@ -1,13 +1,20 @@
 @use './breakpoints' as mix;
 
 .header__grid {
-  position: relative;
+  background: url('/assets/home/bg-pattern-header.svg');
+  background-repeat: no-repeat;
+  background-size: 27.75rem;
+  background-position-y: -174px;
+  background-position-x: -40px;
   text-align: center;
   display: grid;
   place-items: center;
   padding: 2.875rem 1.5rem;
 
   @include mix.breakpoint(med) {
+    background-size: 41.625rem;
+    background-position-y: -206px;
+    background-position-x: 24rem;
     text-align: left;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1.875rem 31.25rem;
@@ -17,26 +24,10 @@
   }
 
   @include mix.breakpoint(lrg) {
+    background-size: 70.875rem;
+    background-position-y: -508px;
+    background-position-x: 40.6rem;
     padding: 5.0625rem 10.3125rem 0 10.3125rem;
-  }
-
-  &-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-width: 1134px;
-    z-index: -500;
-
-    @include mix.breakpoint(med) {
-      top: -250px;
-      left: 300px;
-    }
-
-    @include mix.breakpoint(lrg) {
-      top: -500px;
-      left: 650px;
-    }
   }
 
   &-logo {
@@ -50,27 +41,26 @@
   }
 
   &-graph {
+    width: 50%;
     margin-top: 5rem;
-    max-width: 100%;
-    height: auto;
 
     @include mix.breakpoint(med) {
       grid-column: 2 / -1;
       grid-row: 2 / 3;
-      margin-top: 0;
+      width: auto;
       margin-left: 2.125rem; 
-      margin-top: 35px;
+      margin-top: 2.1875rem;
     }
 
     @include mix.breakpoint(lrg) {
       margin-left: 3.125rem; 
-      margin-top: 130px;
+      margin-top: 8.125rem;
     }
   }
 
   .cta {
-    margin-top: 4rem;
     max-width: 33.75rem;
+    margin-top: 4rem;
 
     .cta__descrip {margin: 1.5rem 0;}
 
@@ -80,9 +70,7 @@
       margin-top: 0;
     }
 
-    @include mix.breakpoint(lrg) {
-      margin-top: 100px;
-    }
+    @include mix.breakpoint(lrg) {margin-top: 6.25rem;}
   }
 }
 

@@ -81,7 +81,8 @@ body {
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--clr-headers);
   font-weight: 700;
 }
@@ -157,36 +158,32 @@ a:active {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1450px;
   margin: 0 auto;
-}
-
-.img {
-  width: 100%;
-  height: auto;
 }
 
 .sub-card {
   background-color: var(--clr-white);
   color: var(--clr-headers);
+  max-width: 43.0625rem;
+  min-width: 20rem;
   text-align: center;
   padding: 2.5rem 3.3125rem;
-  border-radius: 13px;
-  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
-  min-width: 20rem;
-  max-width: 43.0625rem;
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
+  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
 }
 @media screen and (min-width: 48em) {
   .sub-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    text-align: left;
   }
 }
 @media screen and (min-width: 65.625em) {
   .sub-card {
     display: initial;
+    text-align: center;
     margin-bottom: 0;
   }
 }
@@ -220,23 +217,26 @@ a:active {
 }
 
 .sub-card--pro {
-  color: var(--clr-white-opac);
+  background: url("/assets/home/bg-pattern-pricing.svg");
+  background-repeat: no-repeat;
+  background-size: 267%;
+  background-position-y: -365px;
+  background-position-x: -271px;
   background-color: var(--clr-accent);
-  position: relative;
-  overflow: hidden;
-}
-.sub-card--pro__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 355px;
+  color: var(--clr-white-opac);
 }
 @media screen and (min-width: 48em) {
-  .sub-card--pro__bg {
-    width: 700px;
-    top: -170px;
-    left: -145px;
+  .sub-card--pro {
+    background-size: 109%;
+    background-position-y: -199px;
+    background-position-x: -251px;
+  }
+}
+@media screen and (min-width: 65.625em) {
+  .sub-card--pro {
+    background-size: 270%;
+    background-position-y: -346px;
+    background-position-x: -272px;
   }
 }
 .sub-card--pro__version {
@@ -247,29 +247,29 @@ a:active {
 }
 
 .countdown {
-  text-align: center;
-  padding-top: 907px;
-  padding-bottom: 100px;
   max-width: 1265px;
+  text-align: center;
+  padding-top: 56.6875rem;
+  padding-bottom: 6.25rem;
   margin: 0 auto;
 }
 @media screen and (min-width: 48em) {
   .countdown {
-    padding-top: 655px;
+    padding-top: 40.9375rem;
   }
 }
 @media screen and (min-width: 65.625em) {
   .countdown {
-    padding-top: 397px;
+    padding-top: 24.8125rem;
     padding-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 65.625em) {
   .countdown__flex {
-    padding: 2rem 5.4375rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 5.4375rem;
   }
   .countdown__flex .btn {
     width: 10.9375rem;
@@ -278,7 +278,7 @@ a:active {
 }
 .countdown__release {
   font-size: 1rem;
-  letter-spacing: 5px;
+  letter-spacing: 0.3125rem;
 }
 .countdown__release--light {
   color: var(--clr-white);
@@ -312,7 +312,11 @@ a:active {
 }
 
 .header__grid {
-  position: relative;
+  background: url("/assets/home/bg-pattern-header.svg");
+  background-repeat: no-repeat;
+  background-size: 27.75rem;
+  background-position-y: -174px;
+  background-position-x: -40px;
   text-align: center;
   display: grid;
   place-items: center;
@@ -320,6 +324,9 @@ a:active {
 }
 @media screen and (min-width: 48em) {
   .header__grid {
+    background-size: 41.625rem;
+    background-position-y: -206px;
+    background-position-x: 24rem;
     text-align: left;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1.875rem 31.25rem;
@@ -330,27 +337,10 @@ a:active {
 }
 @media screen and (min-width: 65.625em) {
   .header__grid {
+    background-size: 70.875rem;
+    background-position-y: -508px;
+    background-position-x: 40.6rem;
     padding: 5.0625rem 10.3125rem 0 10.3125rem;
-  }
-}
-.header__grid-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  max-width: 1134px;
-  z-index: -500;
-}
-@media screen and (min-width: 48em) {
-  .header__grid-bg {
-    top: -250px;
-    left: 300px;
-  }
-}
-@media screen and (min-width: 65.625em) {
-  .header__grid-bg {
-    top: -500px;
-    left: 650px;
   }
 }
 .header__grid-logo {
@@ -364,28 +354,27 @@ a:active {
   }
 }
 .header__grid-graph {
+  width: 50%;
   margin-top: 5rem;
-  max-width: 100%;
-  height: auto;
 }
 @media screen and (min-width: 48em) {
   .header__grid-graph {
     grid-column: 2/-1;
     grid-row: 2/3;
-    margin-top: 0;
+    width: auto;
     margin-left: 2.125rem;
-    margin-top: 35px;
+    margin-top: 2.1875rem;
   }
 }
 @media screen and (min-width: 65.625em) {
   .header__grid-graph {
     margin-left: 3.125rem;
-    margin-top: 130px;
+    margin-top: 8.125rem;
   }
 }
 .header__grid .cta {
-  margin-top: 4rem;
   max-width: 33.75rem;
+  margin-top: 4rem;
 }
 .header__grid .cta .cta__descrip {
   margin: 1.5rem 0;
@@ -399,13 +388,13 @@ a:active {
 }
 @media screen and (min-width: 65.625em) {
   .header__grid .cta {
-    margin-top: 100px;
+    margin-top: 6.25rem;
   }
 }
 
 .sub-container {
-  padding: 1.5rem;
   position: relative;
+  padding: 1.5rem;
   z-index: 500;
 }
 @media screen and (min-width: 48em) {
@@ -416,16 +405,15 @@ a:active {
 @media screen and (min-width: 65.625em) {
   .sub-container {
     display: flex;
-    padding: 10.625rem 10.3125rem 5.125rem;
     justify-content: center;
     gap: 1.875rem;
+    padding: 10.625rem 10.3125rem 5.125rem;
   }
 }
 
 @media screen and (min-width: 48em) {
   .sub-card .btn {
     width: 60%;
-    margin: 0 auto;
   }
 }
 @media screen and (min-width: 65.625em) {
@@ -437,24 +425,25 @@ a:active {
 
 .footer-bg {
   background: url("/assets/home/bg-pattern-footer.svg");
-  background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: 8.375rem;
+  background-size: 275%;
+  background-position-y: 16rem;
   background-position-x: center;
   background-color: var(--clr-dark);
   margin-top: -865px;
 }
 @media screen and (min-width: 48em) {
   .footer-bg {
+    background-size: 200%;
+    background-position-y: 1.625rem;
     margin-top: -688px;
-    background-size: contain;
   }
 }
 @media screen and (min-width: 65.625em) {
   .footer-bg {
+    background-size: 151%;
+    background-position-y: -603px;
+    background-position-x: -789px;
     margin-top: -400px;
-    background-size: cover;
-    background-position-y: -120px;
-    background-position-x: -400px;
   }
 }/*# sourceMappingURL=main.css.map */
