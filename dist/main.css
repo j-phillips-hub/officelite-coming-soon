@@ -33,6 +33,12 @@ button,
 textarea,
 select {
   font: inherit;
+  border: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
 
 body {
@@ -46,12 +52,15 @@ body {
   --clr-body-bg: hsl(0, 0%, 95%);
   --clr-err: hsl(0, 83%, 65%);
   --clr-accent: hsl(228, 100%, 66%);
+  --clr-accent-opac: hsla(228, 100%, 66%, 0.1);
   --clr-dark-hover: hsl(228, 100%, 75%);
   --clr-accent-light: hsla(228, 100%, 66%, 0.15);
   --clr-accent-light-hover: hsla(228, 100%, 66%, 0.25);
   --clr-dark: hsl(229, 22%, 19%);
   --clr-headers: hsl(228, 22%, 26%);
+  --clr-headers-opac: hsla(228, 22%, 26%, 0.4);
   --clr-body: hsl(227, 13%, 52%);
+  --clr-body-opac: hsla(227, 13%, 52%, 0.5);
   --clr-white: hsl(0, 0%, 100%);
   --clr-white-opac: hsla(0, 0%, 100%, 0.75);
   --br-28: 1.75rem;
@@ -141,8 +150,12 @@ a:active {
   color: var(--clr-dark-hover);
 }
 
-.btn-md {
+.btn--md {
   padding: 1.12em 2.625em;
+}
+
+.btn--lrg {
+  padding: 0.875rem 0;
 }
 
 .br-28 {
@@ -160,6 +173,10 @@ a:active {
 .container {
   max-width: 1450px;
   margin: 0 auto;
+}
+
+.hidden {
+  display: none;
 }
 
 .sub-card {
@@ -280,11 +297,14 @@ a:active {
   font-size: 1rem;
   letter-spacing: 0.3125rem;
 }
-.countdown__release--light {
+.countdown__release-light {
   color: var(--clr-white);
 }
-.countdown__release--dark {
+.countdown__release-accent {
   color: var(--clr-accent);
+}
+.countdown__release--dark {
+  color: var(--clr-headers);
 }
 .countdown .countdown-card-wrapper {
   display: flex;
@@ -300,15 +320,74 @@ a:active {
 .countdown .countdown-card-wrapper .countdown-card__num {
   font-weight: 700;
   font-size: clamp(2rem, 5vw, 3.5rem);
-}
-.countdown .countdown-card-wrapper .countdown-card__num--light {
   color: var(--clr-white);
 }
+.countdown .countdown-card-wrapper .countdown-card__num--dark {
+  color: var(--clr-accent);
+}
 .countdown .countdown-card-wrapper .countdown-card__text {
-  color: var(--cl-white);
+  color: var(--clr-white-opac);
   font-weight: 700;
   font-size: clamp(0.75rem, 2vw, 1rem);
   opacity: 0.5;
+}
+.countdown .countdown-card-wrapper .countdown-card__text--dark {
+  color: var(--clr-headers);
+}
+.countdown .countdown-card-wrapper .countdown-card--light {
+  background-color: var(--clr-accent-opac);
+}
+
+.countdown--signup {
+  padding-top: 0;
+  padding-bottom: 4rem;
+}
+
+.signup {
+  background-color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 445px;
+  padding: 1.5rem;
+}
+.signup__input {
+  color: var(--clr-body-opac);
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid var(--clr-body-opac);
+  padding: 0 0 1rem 1rem;
+}
+.signup .select__dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1.75rem;
+}
+.signup .select__dropdown-arrow {
+  width: 11px;
+  height: auto;
+}
+.signup .select .package-modal__option {
+  border-bottom: 1px solid var(--clr-body-opac);
+  padding: 1rem;
+}
+.signup .select .package-modal__option:nth-child(3) {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.signup .select .package-modal__option--dark {
+  color: var(--clr-headers);
+  font-weight: 700;
+}
+.signup .select .package-modal__option--light {
+  color: var(--clr-headers-opac);
+  font-weight: 700;
+}
+.signup .btn {
+  width: 100%;
 }
 
 .header__grid {
@@ -389,6 +468,22 @@ a:active {
 @media screen and (min-width: 65.625em) {
   .header__grid .cta {
     margin-top: 6.25rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .header__grid--form {
+    background: none;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 4.5rem 2.5rem 0 2.5rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .header__grid .cta--form {
+    place-self: center;
+    margin-top: 104px;
+    margin-bottom: 1rem;
   }
 }
 

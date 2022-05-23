@@ -32,9 +32,11 @@
     font-size: 1rem;
     letter-spacing: 0.3125rem;
 
-    &--light {color: var(--clr-white);}
+    &-light {color: var(--clr-white);}
 
-    &--dark {color: var(--clr-accent);}
+    &-accent {color: var(--clr-accent);}
+
+    &--dark {color: var(--clr-headers);}
   }
 
   .countdown-card-wrapper {
@@ -47,20 +49,36 @@
     .countdown-card {
       background-color: var(--clr-headers);
       padding: 0.6875rem 1.125rem;
-
+     
       &__num {
         font-weight: 700;
         font-size: clamp(2rem, 5vw, 3.5rem);
+        color: var(--clr-white);
 
-        &--light {color: var(--clr-white);}
+        &--dark {color: var(--clr-accent);}
       }
 
       &__text {
-        color: var(--cl-white);
+        color: var(--clr-white-opac);
         font-weight: 700;
         font-size: clamp(0.75rem, 2vw, 1rem);
         opacity: 0.5;
+
+        &--dark {
+          color: var(--clr-headers);
+        }
       }
     }
+
+    .countdown-card--light {
+      background-color: var(--clr-accent-opac);
+    }
   }
+
+
+}
+
+.countdown--signup {
+  padding-top: 0;
+  padding-bottom: 4rem;
 }

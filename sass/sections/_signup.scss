@@ -1,0 +1,59 @@
+.signup {
+  background-color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 445px;
+  padding: 1.5rem;
+
+  &__input {
+    color: var(--clr-body-opac);
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid var(--clr-body-opac);
+    padding: 0 0 1rem 1rem;
+  }
+
+  .select {
+
+    &__dropdown {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 1.75rem;
+
+      &-arrow {
+        width: 11px;
+        height: auto;
+      }
+    }
+
+    .package-modal {
+      &__option {
+        border-bottom: 1px solid var(--clr-body-opac);
+        padding: 1rem;
+
+        &:nth-child(3) {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
+
+        &--dark {
+          color: var(--clr-headers);
+          font-weight: 700;
+        }
+
+        &--light {
+          color: var(--clr-headers-opac);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

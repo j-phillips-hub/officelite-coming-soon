@@ -28,7 +28,15 @@ picture {
 input,
 button,
 textarea,
-select {font: inherit;}
+select {
+  font: inherit;
+  border: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
 
 body {
   background-color: var(--clr-body-bg);

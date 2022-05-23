@@ -2,12 +2,15 @@
   --clr-body-bg: hsl(0, 0%, 95%);
   --clr-err: hsl(0, 83%, 65%);
   --clr-accent: hsl(228, 100%, 66%);
+  --clr-accent-opac: hsla(228, 100%, 66%, 0.1);
   --clr-dark-hover: hsl(228, 100%, 75%);
   --clr-accent-light: hsla(228, 100%, 66%, 0.15);
   --clr-accent-light-hover: hsla(228, 100%, 66%, 0.25);
   --clr-dark: hsl(229, 22%, 19%);
   --clr-headers: hsl(228, 22%, 26%);
+  --clr-headers-opac: hsla(228, 22%, 26%, 0.4);
   --clr-body: hsl(227, 13%, 52%);
+  --clr-body-opac: hsla(227, 13%, 52%, 0.5);
   --clr-white: hsl(0, 0%, 100%);
   --clr-white-opac: hsla(0, 0%, 100%, 0.75);
 
