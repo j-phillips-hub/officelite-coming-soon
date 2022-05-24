@@ -16,6 +16,11 @@
     color: var(--clr-accent);
 
     &:hover {background-color: var(--clr-accent-light-hover);}
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--clr-accent);
+    }
   }
 
   &-white {

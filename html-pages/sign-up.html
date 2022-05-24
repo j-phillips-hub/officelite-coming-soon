@@ -12,112 +12,109 @@
 
 <body>
 
-  <header class="header__grid header__grid--form container">
-    <img class="header__grid-logo" src="../assets/shared/logo.svg" alt="">
+    <header class="header__grid header__grid--form container">
+      <img class="header__grid-logo" src="../assets/shared/logo.svg" alt="">
+  
+      <div class="cta cta--form">
+        <h1 class="cta__header">Work smarter. Save time.</h1>
+        <p class="cta__descrip">
+          Easily manage your projects. Get on the list and receive in-app perks available only to
+          early subscribers. We are moving into final development and getting ready for official launch soon.
+        </p>
+      </div>
+    </header>
 
-    <div class="cta cta--form">
-      <h1 class="cta__header">Work smarter. Save time.</h1>
-      <p class="cta__descrip">
-        Easily manage your projects. Get on the list and receive in-app perks available only to
-        early subscribers. We are moving into final development and getting ready for official launch soon.
-      </p>
-    </div>
-  </header>
-
-  <main>
-    <section class="countdown countdown--signup">
-      <div class="countdown__flex">
-        <div>
-          <h3 class="countdown__release">
-            <span class="countdown__release--dark">Coming</span>
-            <span class="countdown__release-accent">4 Nov 2022</span>
-          </h3>
-
-          <div class="countdown-card-wrapper">
-            <div class="countdown-card countdown-card--light br-4">
-              <div id="daysLeft" class="countdown-card__num countdown-card__num--dark"></div>
-              <p class="countdown-card__text countdown-card__text--dark">Days</p>
-            </div>
-
-            <div class="countdown-card countdown-card--light br-4">
-              <div id="hoursLeft" class="countdown-card__num countdown-card__num--dark"></div>
-              <p class="countdown-card__text countdown-card__text--dark">Hours</p>
-            </div>
-
-            <div class="countdown-card countdown-card--light br-4">
-              <div id="minLeft" class="countdown-card__num countdown-card__num--dark"></div>
-              <p class="countdown-card__text countdown-card__text--dark">Min</p>
-            </div>
-
-            <div class="countdown-card countdown-card--light br-4">
-              <div id="secLeft" class="countdown-card__num countdown-card__num--dark"></div>
-              <p class="countdown-card__text countdown-card__text--dark">Sec</p>
+    <main>
+      <section class="countdown countdown--signup">
+        <div class="countdown__flex">
+          <div>
+            <h3 class="countdown__release">
+              <span class="countdown__release--dark">Coming</span>
+              <span class="countdown__release-accent">4 Nov 2022</span>
+            </h3>
+  
+            <div class="countdown-card-wrapper">
+              <div class="countdown-card countdown-card--light br-4">
+                <div id="daysLeft" class="countdown-card__num countdown-card__num--dark"></div>
+                <p class="countdown-card__text countdown-card__text--dark">Days</p>
+              </div>
+  
+              <div class="countdown-card countdown-card--light br-4">
+                <div id="hoursLeft" class="countdown-card__num countdown-card__num--dark"></div>
+                <p class="countdown-card__text countdown-card__text--dark">Hours</p>
+              </div>
+  
+              <div class="countdown-card countdown-card--light br-4">
+                <div id="minLeft" class="countdown-card__num countdown-card__num--dark"></div>
+                <p class="countdown-card__text countdown-card__text--dark">Min</p>
+              </div>
+  
+              <div class="countdown-card countdown-card--light br-4">
+                <div id="secLeft" class="countdown-card__num countdown-card__num--dark"></div>
+                <p class="countdown-card__text countdown-card__text--dark">Sec</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <form id="form" class="signup br-13" action="">
-        <label for="name">
-          <input class="signup__input" id="name" type="text" name="name" placeholder="Name">
-        </label>
-
-        <label for="email">
-          <input class="signup__input" id="email" type="email" name="email" placeholder="Email Address">
-        </label>
-
-        <div class="signup__input select">
-          <div class="select__dropdown">
-            <p>
-              <span class="package-modal__option--dark">Basic Pack</span>
-              <span class="package-modal__option--light">Free</span>
-            </p>
-
-            <img class="select__dropdown-arrow" src="../assets/sign-up/down-arrow.png" alt="">
-          </div>
-
-          <div class="package-modal">
-
-            <div id="optionWrapper" class="hidden">
-              <div class="package-modal__option">
-                <p>
-                  <span class="package-modal__option--dark">Basic Pack</span>
-                  <span class="package-modal__option--light">Free</span>
-                </p>
+      </section>
+  
+      <section>
+        <form id="form" class="signup br-13" action="">
+          <label for="name">
+            <input class="signup__input" id="name" type="text" name="name" placeholder="Name">
+          </label>
+  
+          <label for="email">
+            <input class="signup__input" id="email" type="email" name="email" placeholder="Email Address">
+          </label>
+  
+          <div class="signup__input select">
+  
+            <div id="dropDown" class="select__dropdown">
+              <div id="dropDownText">
+                <span class="package-modal__option--dark">Basic Pack</span>
+                <span class="package-modal__option--light">Free</span>
               </div>
   
-              <div class="package-modal__option">
+              <div>
+                <img id="selectArrow" class="select__dropdown-arrow" src="../assets/sign-up/down-arrow.svg" alt="">
+              </div>
+            </div>
+  
+            <div id="packageModal" class="package-modal">
+              <div id="basic" class="package-modal__option" data-selected="basic">
+                <span class="package-modal__option--dark">Basic Pack</span>
+                <span class="package-modal__option--light">Free</span>
+              </div>
+  
+              <div id="pro" class="package-modal__option" data-selected="pro">
                 <span class="package-modal__option--dark">Pro Pack</span>
                 <span class="package-modal__option--light">$9.99</span>
               </div>
   
-              <div class="package-modal__option">
-                <p>
-                  <span class="package-modal__option--dark">Ultimate Pack</span>
-                  <span class="package-modal__option--light">$19.99</span>
-                </p>
+              <div id="ultimate" class="package-modal__option" data-selected="ultimate">
+                <span class="package-modal__option--dark">Ultimate Pack</span>
+                <span class="package-modal__option--light">$19.99</span>
               </div>
             </div>
-   
           </div>
-        </div>
+  
+          <label for="phone">
+            <input class="signup__input" id="phone" type="tel" name="phone" placeholder="Phone Number">
+          </label>
+  
+          <label for="company">
+            <input class="signup__input" id="company" type="text" name="company" placeholder="Company">
+          </label>
+  
+          <label for="submit">
+            <button id="submit" class="btn btn--lrg btn-dark br-28" type="submit">Get on the list</button>
+          </label>
+        </form>
+      </section>
+    </main>
 
-        <label for="phone">
-          <input class="signup__input" id="phone" type="tel" name="phone" placeholder="Phone Number">
-        </label>
-
-        <label for="company">
-          <input class="signup__input" id="company" type="text" name="company" placeholder="Company">
-        </label>
-
-        <label for="submit">
-          <button id="submit" class="btn btn--lrg btn-dark br-28" type="submit">Get on the list</button>
-        </label>
-      </form>
-    </section>
-  </main>
+  <footer class="footer-bg footer-bg--signup"></footer>
 </body>
 
 </html>

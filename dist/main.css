@@ -142,6 +142,10 @@ a:active {
 .btn-light:hover {
   background-color: var(--clr-accent-light-hover);
 }
+.btn-light:focus {
+  outline: none;
+  border: 1px solid var(--clr-accent);
+}
 .btn-white {
   background-color: var(--clr-white);
   color: var(--clr-accent);
@@ -173,10 +177,6 @@ a:active {
 .container {
   max-width: 1450px;
   margin: 0 auto;
-}
-
-.hidden {
-  display: none;
 }
 
 .sub-card {
@@ -347,18 +347,24 @@ a:active {
   background-color: var(--clr-white);
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   gap: 1.5rem;
   width: 90%;
   max-width: 445px;
   padding: 1.5rem;
+  z-index: 500;
+  position: relative;
 }
 .signup__input {
-  color: var(--clr-body-opac);
+  color: var(--clr-headers);
   width: 100%;
   background-color: transparent;
   border-bottom: 1px solid var(--clr-body-opac);
-  padding: 0 0 1rem 1rem;
+  padding: 1rem;
+}
+.signup__input:focus {
+  outline: none;
+  border: 1px solid var(--clr-accent);
 }
 .signup .select__dropdown {
   display: flex;
@@ -366,13 +372,38 @@ a:active {
   justify-content: space-between;
   padding-right: 1.75rem;
 }
+.signup .select__dropdown:hover {
+  cursor: pointer;
+}
 .signup .select__dropdown-arrow {
-  width: 11px;
+  color: var("--clr-accent");
+  width: 1rem;
   height: auto;
+}
+.signup .select__dropdown-arrow--rotate {
+  transform: rotate(180deg);
+}
+.signup .select .package-modal {
+  transition: all ease-out 0.35s;
+  transform: scaleY(0);
+  height: 0;
+  border: 1px solid var(--clr-headers-opac);
+  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
+  border-radius: 8px;
+}
+.signup .select .package-modal--expanded {
+  transition: all ease-in 0.4s;
+  transform: scaleY(1);
+  height: auto;
+  padding: 0 1.5rem 1.5rem;
+  margin-top: 1rem;
 }
 .signup .select .package-modal__option {
   border-bottom: 1px solid var(--clr-body-opac);
   padding: 1rem;
+}
+.signup .select .package-modal__option:hover {
+  cursor: pointer;
 }
 .signup .select .package-modal__option:nth-child(3) {
   border-bottom: 0;
@@ -541,4 +572,11 @@ a:active {
     background-position-x: -789px;
     margin-top: -400px;
   }
+}
+.footer-bg--signup {
+  background-position: center, center;
+  background-size: contain;
+  height: 20rem;
+  width: 100%;
+  margin-top: -250px;
 }/*# sourceMappingURL=main.css.map */

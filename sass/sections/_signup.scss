@@ -1,19 +1,28 @@
+@use '../layout/breakpoints' as mix;
+
 .signup {
   background-color: var(--clr-white);
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   gap: 1.5rem;
   width: 90%;
   max-width: 445px;
   padding: 1.5rem;
+  z-index: 500;
+  position: relative;
 
   &__input {
-    color: var(--clr-body-opac);
+    color: var(--clr-headers);
     width: 100%;
     background-color: transparent;
     border-bottom: 1px solid var(--clr-body-opac);
-    padding: 0 0 1rem 1rem;
+    padding: 1rem;
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--clr-accent);
+    }
   }
 
   .select {
@@ -24,16 +33,40 @@
       justify-content: space-between;
       padding-right: 1.75rem;
 
+      &:hover {cursor: pointer;}
+
       &-arrow {
-        width: 11px;
+        color: var('--clr-accent');
+        width: 1rem;
         height: auto;
+
+        &--rotate {transform: rotate(180deg);}
       }
     }
 
+
     .package-modal {
+      transition: all ease-out 0.35s;
+      transform: scaleY(0);
+      height: 0;
+      border: 1px solid var(--clr-headers-opac);
+      box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
+      border-radius: 8px;
+     
+
+      &--expanded {
+        transition: all ease-in 0.4s;
+        transform: scaleY(1);
+        height: auto;
+        padding: 0 1.5rem 1.5rem;
+        margin-top: 1rem;
+      }
+
       &__option {
         border-bottom: 1px solid var(--clr-body-opac);
         padding: 1rem;
+
+        &:hover {cursor: pointer;}
 
         &:nth-child(3) {
           border-bottom: 0;
@@ -53,7 +86,7 @@
     }
   }
 
-  .btn {
-    width: 100%;
-  }
+  .btn {width: 100%;}
 }
+
+
