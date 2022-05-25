@@ -9,3 +9,24 @@
   margin: 0 auto;
 }
 
+.email-err {
+  border-bottom: 1px solid var(--clr-err);
+
+  &::placeholder {
+    color: var(--clr-err);
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid var(--clr-err);
+  }
+}
+
+.email-success {
+  border-bottom: 1px solid var(--clr-success);
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid var(--clr-success);
+  }
+}

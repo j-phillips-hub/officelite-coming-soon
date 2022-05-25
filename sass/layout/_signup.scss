@@ -1,0 +1,14 @@
+@use './breakpoints' as mix;
+
+.signup-grid {
+
+  @include mix.breakpoint(lrg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .countdown--signup {
+      grid-column: 1 / 2;
+      padding-left: 4rem;
+    }
+  }
+}

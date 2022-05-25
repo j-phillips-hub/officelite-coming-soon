@@ -28,5 +28,17 @@
     height: 20rem;
     width: 100%;
     margin-top: -250px;
+
+    @include mix.breakpoint(lrg) {
+      background-size: 377%;
+      background-position-y: -472px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 28%;
+      height: 100vh;
+      margin: 0;
+      z-index: -500;
+    }
   }
 }
