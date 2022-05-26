@@ -23,8 +23,8 @@ const dropDownText = document.getElementById('dropDownText');
 const packageModal = document.getElementById('packageModal');
 const selectArrow = document.getElementById('selectArrow');
 
-function toggleArrow() {
-  selectArrow.classList.toggle('select__dropdown-arrow--rotate');
+const toggleArrow = () => {
+  selectArrow.classList.toggle('select-dropdown__arrow--rotate');
 }
 
 dropDown.addEventListener('click', () => {
@@ -39,31 +39,61 @@ for (const elm of selected) {
   elm.addEventListener('click', function() {
     const modalId = this.dataset.selected;
     const inner = document.getElementById(modalId).innerText;
+    const modalImg = document.getElementById(modalId).firstElementChild;
+    modalImg.classList.toggle('modal-option__img--show');
     dropDownText.innerText = inner;
     dropDownText.style.color = '#5274ff';
-    packageModal.classList.remove('package-modal--expanded');
     toggleArrow();
   })
 }
 
 const form = document.getElementById('form');
 const email = document.getElementById('email');
+const emailErr = document.getElementById('emailErr');
+const emailCheck = document.getElementById('emailCheck');
 const regX = /[a-zA-Z0-9_\.\+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-\.]+/;
 
-email.addEventListener('keyup', (e) => {
+const addErr = () => {
+  email.classList.add('email-err');
+  emailErr.classList.add('email__img--show')
+  email.placeholder = 'larry@gmail.com';
+}
+
+const removeErr = () => {
+  email.classList.remove('email-err');
+  emailErr.classList.remove('email__img--show');
+}
+
+const addSuccess = () => {
+  email.classList.add('email-success');
+  emailCheck.classList.add('email__img--show');
+}
+
+const removeSuccess = () => {
+  emailCheck.classList.remove('email__img--show');
+  email.classList.remove('email-success');
+}
+
+
+email.addEventListener('keyup', () => {
   if (email.value.match(regX)) {
-    email.classList.remove('email-err');
-    email.classList.add('email-success');
+    removeErr();
+    addSuccess();
   } else {
-    email.classList.add('email-err');
-    email.placeholder = 'larry@gmail.com';
-    e.preventDefault()
+    removeSuccess();
+    addErr();
   }
 })
 
+//ADD DEFAULT? 
+
 form.addEventListener('submit', (e) => {
-  if(!email.value.match(regX)) {
+  if(email.value === '') {
+    addErr();
+    e.preventDefault();
+  } else if (!email.value.match(regX)) {
     e.preventDefault();
   }
 })
+
 

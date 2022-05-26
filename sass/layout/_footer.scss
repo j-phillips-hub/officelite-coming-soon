@@ -23,6 +23,9 @@
   }
 
   &--signup {
+    background: url("/assets/sign-up/bg-pattern-side.svg");
+    background-repeat: no-repeat;
+    background-color: var(--clr-dark);
     background-position: center, center;
     background-size: contain;
     height: 20rem;
@@ -30,8 +33,9 @@
     margin-top: -250px;
 
     @include mix.breakpoint(lrg) {
-      background-size: 377%;
-      background-position-y: -472px;
+      background-size: 438%;
+      background-position-y: -684px;
+      background-position-x: -625px;
       position: absolute;
       top: 0;
       right: 0;

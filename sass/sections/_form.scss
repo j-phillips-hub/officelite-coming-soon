@@ -35,7 +35,7 @@
 
   .select {
 
-    &__dropdown {
+    &-dropdown {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -43,7 +43,17 @@
 
       &:hover {cursor: pointer;}
 
-      &-arrow {
+      &__dark {
+        color: var(--clr-headers);
+        font-weight: 700;
+      }
+
+      &__light {
+        color: var(--clr-headers-opac);
+        font-weight: 700;
+      }
+
+      &__arrow {
         color: var('--clr-accent');
         width: 0.6875rem;
         height: 0.34375rem;
@@ -68,7 +78,8 @@
         margin-top: 1rem;
       }
 
-      &__option {
+      .modal-option {
+        position: relative;
         border-bottom: 1px solid var(--clr-body-opac);
         padding: 1rem;
 
@@ -79,16 +90,40 @@
           padding-bottom: 0;
         }
 
-        &--dark {
+        &__dark {
           color: var(--clr-headers);
           font-weight: 700;
         }
 
-        &--light {
+        &__light {
           color: var(--clr-headers-opac);
           font-weight: 700;
         }
+        
+        &__img {
+          display: none;
+        }
+
+        &__img--show {
+          display: block;
+          position: absolute;
+          right: 1rem;
+          top: 1.25rem;
+        }
       }
+    }
+  }
+
+  .email {
+    position: relative; 
+
+    &__img {display: none;}
+
+    &__img--show {
+      display: block;
+      position: absolute;
+      right: 2.5rem;
+      top: 1.125rem;
     }
   }
 

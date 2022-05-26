@@ -22,11 +22,4 @@
   }
 }
 
-.email-success {
-  border-bottom: 1px solid var(--clr-success);
-
-  &:focus {
-    outline: none;
-    border-bottom: 1px solid var(--clr-success);
-  }
-}
+.email-success {border-bottom: 1px solid var(--clr-accent);}

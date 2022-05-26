@@ -51,7 +51,6 @@ body {
 :root {
   --clr-body-bg: hsl(0, 0%, 95%);
   --clr-err: hsl(0, 83%, 65%);
-  --clr-success:	hsl(120, 60%, 47%);
   --clr-accent: hsl(228, 100%, 66%);
   --clr-accent-opac: hsla(228, 100%, 66%, 0.1);
   --clr-dark-hover: hsl(228, 100%, 75%);
@@ -318,21 +317,29 @@ a:active {
   outline: none;
   border-bottom: 1px solid var(--clr-accent);
 }
-.signup .select__dropdown {
+.signup .select-dropdown {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-right: 1.75rem;
 }
-.signup .select__dropdown:hover {
+.signup .select-dropdown:hover {
   cursor: pointer;
 }
-.signup .select__dropdown-arrow {
+.signup .select-dropdown__dark {
+  color: var(--clr-headers);
+  font-weight: 700;
+}
+.signup .select-dropdown__light {
+  color: var(--clr-headers-opac);
+  font-weight: 700;
+}
+.signup .select-dropdown__arrow {
   color: var("--clr-accent");
   width: 0.6875rem;
   height: 0.34375rem;
 }
-.signup .select__dropdown-arrow--rotate {
+.signup .select-dropdown__arrow--rotate {
   transform: rotate(180deg);
 }
 .signup .select .package-modal {
@@ -350,24 +357,46 @@ a:active {
   padding: 0 1.5rem 1.5rem;
   margin-top: 1rem;
 }
-.signup .select .package-modal__option {
+.signup .select .package-modal .modal-option {
+  position: relative;
   border-bottom: 1px solid var(--clr-body-opac);
   padding: 1rem;
 }
-.signup .select .package-modal__option:hover {
+.signup .select .package-modal .modal-option:hover {
   cursor: pointer;
 }
-.signup .select .package-modal__option:nth-child(3) {
+.signup .select .package-modal .modal-option:nth-child(3) {
   border-bottom: 0;
   padding-bottom: 0;
 }
-.signup .select .package-modal__option--dark {
+.signup .select .package-modal .modal-option__dark {
   color: var(--clr-headers);
   font-weight: 700;
 }
-.signup .select .package-modal__option--light {
+.signup .select .package-modal .modal-option__light {
   color: var(--clr-headers-opac);
   font-weight: 700;
+}
+.signup .select .package-modal .modal-option__img {
+  display: none;
+}
+.signup .select .package-modal .modal-option__img--show {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  top: 1.25rem;
+}
+.signup .email {
+  position: relative;
+}
+.signup .email__img {
+  display: none;
+}
+.signup .email__img--show {
+  display: block;
+  position: absolute;
+  right: 2.5rem;
+  top: 1.125rem;
 }
 .signup .btn {
   width: 100%;
@@ -532,6 +561,9 @@ a:active {
   }
 }
 .footer-bg--signup {
+  background: url("/assets/sign-up/bg-pattern-side.svg");
+  background-repeat: no-repeat;
+  background-color: var(--clr-dark);
   background-position: center, center;
   background-size: contain;
   height: 20rem;
@@ -540,8 +572,9 @@ a:active {
 }
 @media screen and (min-width: 75em) {
   .footer-bg--signup {
-    background-size: 377%;
-    background-position-y: -472px;
+    background-size: 438%;
+    background-position-y: -684px;
+    background-position-x: -625px;
     position: absolute;
     top: 0;
     right: 0;
@@ -598,11 +631,7 @@ a:active {
 }
 
 .email-success {
-  border-bottom: 1px solid var(--clr-success);
-}
-.email-success:focus {
-  outline: none;
-  border-bottom: 1px solid var(--clr-success);
+  border-bottom: 1px solid var(--clr-accent);
 }
 
 .btn {

@@ -64,36 +64,41 @@
           <input id="name" class="signup__input" type="text" name="name" placeholder="Name">
         </label>
 
-        <label for="email">
+        <label class="email" for="email">
+          <img id="emailCheck" class="email__img" src="../assets/sign-up/icon-check.svg" alt="">
+          <img id="emailErr" class="email__img" src="../assets/sign-up/icon-cross.svg" alt="">
           <input id="email" class="signup__input" type="email" name="email" placeholder="Email Address">
         </label>
 
         <div class="signup__input select">
-          <div id="dropDown" class="select__dropdown">
+          <div id="dropDown" class="select-dropdown">
             <div id="dropDownText">
-              <span class="package-modal__option--dark">Basic Pack</span>
-              <span class="package-modal__option--light">Free</span>
+              <span class="select-dropdown__dark">Basic Pack</span>
+              <span class="select-dropdown__light">Free</span>
             </div>
 
             <div>
-              <img id="selectArrow" class="select__dropdown-arrow" src="../assets/sign-up/icon-arrow-down.svg" alt="">
+              <img id="selectArrow" class="select-dropdown__arrow" src="../assets/sign-up/icon-arrow-down.svg" alt="">
             </div>
           </div>
 
           <div id="packageModal" class="package-modal">
-            <div id="basic" class="package-modal__option" data-selected="basic">
-              <span class="package-modal__option--dark">Basic Pack</span>
-              <span class="package-modal__option--light">Free</span>
+            <div id="basic" class="modal-option" data-selected="basic">
+              <img id="basicImg" class="modal-option__img" src="../assets/sign-up/icon-check.svg" alt="">
+              <span class="modal-option__dark">Basic Pack</span>
+              <span class="modal-option__light">Free</span>
             </div>
 
-            <div id="pro" class="package-modal__option" data-selected="pro">
-              <span class="package-modal__option--dark">Pro Pack</span>
-              <span class="package-modal__option--light">$9.99</span>
+            <div id="pro" class="modal-option" data-selected="pro">
+              <img id="proImg" class="modal-option__img" src="../assets/sign-up/icon-check.svg" alt="">
+              <span class="modal-option__dark">Pro Pack</span>
+              <span class="modal-option__light">$9.99</span>
             </div>
 
-            <div id="ultimate" class="package-modal__option" data-selected="ultimate">
-              <span class="package-modal__option--dark">Ultimate Pack</span>
-              <span class="package-modal__option--light">$19.99</span>
+            <div id="ultimate" class="modal-option" data-selected="ultimate">
+              <img id="ultimateImg" class="modal-option__img" src="../assets/sign-up/icon-check.svg" alt="">
+              <span class="modal-option__dark">Ultimate Pack</span>
+              <span class="modal-option__light">$19.99</span>
             </div>
           </div>
         </div>
