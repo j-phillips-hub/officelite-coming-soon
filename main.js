@@ -30,23 +30,39 @@ const toggleArrow = () => {
 dropDown.addEventListener('click', () => {
   packageModal.classList.toggle('package-modal--expanded');
   toggleArrow();
-})
+});
 
 const selections = '[data-selected]';
 const selected = document.querySelectorAll(selections);
+const basic = document.getElementById('basicImg');
+const pro = document.getElementById('proImg');
+const ult = document.getElementById('ultimateImg');
 
 for (const elm of selected) {
   elm.addEventListener('click', function() {
     const modalId = this.dataset.selected;
-    const inner = document.getElementById(modalId).innerText;
     const modalImg = document.getElementById(modalId).firstElementChild;
-    modalImg.classList.toggle('modal-option__img--show');
+    const inner = document.getElementById(modalId).innerText;
+    modalImg.classList.add('modal-option__img--show');
     dropDownText.innerText = inner;
     dropDownText.style.color = '#5274ff';
-    toggleArrow();
-  })
+
+    if (modalImg.classList.contains('basic')) {
+      pro.classList.remove('modal-option__img--show');
+      ult.classList.remove('modal-option__img--show');
+
+    } else if (modalImg.classList.contains('pro')) {
+      basic.classList.remove('modal-option__img--show');
+      ult.classList.remove('modal-option__img--show');
+      
+    } else if (modalImg.classList.contains('ultimate')) {
+      pro.classList.remove('modal-option__img--show');
+      basic.classList.remove('modal-option__img--show');
+    }
+  });
 }
 
+const phone = document.getElementById('phone');
 const form = document.getElementById('form');
 const email = document.getElementById('email');
 const emailErr = document.getElementById('emailErr');
@@ -55,7 +71,7 @@ const regX = /[a-zA-Z0-9_\.\+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-\.]+/;
 
 const addErr = () => {
   email.classList.add('email-err');
-  emailErr.classList.add('email__img--show')
+  emailErr.classList.add('email__img--show');
   email.placeholder = 'larry@gmail.com';
 }
 
@@ -74,26 +90,22 @@ const removeSuccess = () => {
   email.classList.remove('email-success');
 }
 
-
 email.addEventListener('keyup', () => {
   if (email.value.match(regX)) {
-    removeErr();
     addSuccess();
+    removeErr();
   } else {
-    removeSuccess();
     addErr();
+    removeSuccess();
   }
-})
-
-//ADD DEFAULT? 
+});
 
 form.addEventListener('submit', (e) => {
-  if(email.value === '') {
+  if(email.value === '' || !email.value.match(regX)) {
     addErr();
     e.preventDefault();
-  } else if (!email.value.match(regX)) {
-    e.preventDefault();
   }
-})
+});
+
 
 

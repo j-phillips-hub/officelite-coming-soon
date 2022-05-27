@@ -44,5 +44,9 @@
       margin: 0;
       z-index: -500;
     }
+
+    @include mix.breakpoint(xl) {
+      background: none;
+    }
   }
 }

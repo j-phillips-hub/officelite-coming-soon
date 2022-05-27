@@ -58,64 +58,63 @@
       </div>
     </section>
 
-    <section class="form-wrapper">
-      <form id="form" class="signup br-13" action="" novalidate>
-        <label for="name">
-          <input id="name" class="signup__input" type="text" name="name" placeholder="Name">
-        </label>
+    <form id="form" class="form-wrapper signup br-13" action="post" novalidate>
+      <label for="name">
+        <input id="name" class="signup__input" type="text" name="name" placeholder="Name">
+      </label>
 
-        <label class="email" for="email">
-          <img id="emailCheck" class="email__img" src="../assets/sign-up/icon-check.svg" alt="">
-          <img id="emailErr" class="email__img" src="../assets/sign-up/icon-cross.svg" alt="">
-          <input id="email" class="signup__input" type="email" name="email" placeholder="Email Address">
-        </label>
+      <label class="email" for="email">
+        <img id="emailCheck" class="email__img" src="../assets/sign-up/icon-check.svg" alt="">
+        <img id="emailErr" class="email__img" src="../assets/sign-up/icon-cross.svg" alt="">
+        <input id="email" class="signup__input" type="email" name="email" placeholder="Email Address">
+      </label>
 
-        <div class="signup__input select">
-          <div id="dropDown" class="select-dropdown">
-            <div id="dropDownText">
-              <span class="select-dropdown__dark">Basic Pack</span>
-              <span class="select-dropdown__light">Free</span>
-            </div>
-
-            <div>
-              <img id="selectArrow" class="select-dropdown__arrow" src="../assets/sign-up/icon-arrow-down.svg" alt="">
-            </div>
+      <div class="signup__input select">
+        <div id="dropDown" class="select-dropdown">
+          <div id="dropDownText">
+            <span class="select-dropdown__dark">Basic Pack</span>
+            <span class="select-dropdown__light">Free</span>
           </div>
 
-          <div id="packageModal" class="package-modal">
-            <div id="basic" class="modal-option" data-selected="basic">
-              <img id="basicImg" class="modal-option__img" src="../assets/sign-up/icon-check.svg" alt="">
-              <span class="modal-option__dark">Basic Pack</span>
-              <span class="modal-option__light">Free</span>
-            </div>
-
-            <div id="pro" class="modal-option" data-selected="pro">
-              <img id="proImg" class="modal-option__img" src="../assets/sign-up/icon-check.svg" alt="">
-              <span class="modal-option__dark">Pro Pack</span>
-              <span class="modal-option__light">$9.99</span>
-            </div>
-
-            <div id="ultimate" class="modal-option" data-selected="ultimate">
-              <img id="ultimateImg" class="modal-option__img" src="../assets/sign-up/icon-check.svg" alt="">
-              <span class="modal-option__dark">Ultimate Pack</span>
-              <span class="modal-option__light">$19.99</span>
-            </div>
+          <div>
+            <img id="selectArrow" class="select-dropdown__arrow" src="../assets/sign-up/icon-arrow-down.svg" alt="">
           </div>
         </div>
 
-        <label for="phone">
-          <input id="phone" class="signup__input" type="tel" name="phone" placeholder="Phone Number">
-        </label>
+        <div id="packageModal" class="package-modal">
+          <div id="basic" class="modal-option" data-selected="basic">
+            <img id="basicImg" class="modal-option__img basic" src="../assets/sign-up/icon-check.svg" alt="">
+            <span class="modal-option__dark">Basic Pack</span>
+            <span class="modal-option__light">Free</span>
+          </div>
 
-        <label for="company">
-          <input id="company" class="signup__input" type="text" name="company" placeholder="Company">
-        </label>
+          <div id="pro" class="modal-option" data-selected="pro">
+            <img id="proImg" class="modal-option__img pro" src="../assets/sign-up/icon-check.svg" alt="">
+            <span class="modal-option__dark">Pro Pack</span>
+            <span class="modal-option__light">$9.99</span>
+          </div>
 
-        <label for="submit">
-          <button id="submit" class="btn btn--lrg btn-dark br-28" type="submit">Get on the list</button>
-        </label>
-      </form>
-    </section>
+          <div id="ultimate" class="modal-option" data-selected="ultimate">
+            <img id="ultimateImg" class="modal-option__img ultimate" src="../assets/sign-up/icon-check.svg" alt="">
+            <span class="modal-option__dark">Ultimate Pack</span>
+            <span class="modal-option__light">$19.99</span>
+          </div>
+        </div>
+      </div>
+
+      <label for="phone">
+        <input id="phone" class="signup__input" type="tel" name="phone" placeholder="Phone Number"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      </label>
+
+      <label for="company">
+        <input id="company" class="signup__input" type="text" name="company" placeholder="Company">
+      </label>
+
+      <label for="submit">
+        <button id="submit" class="btn btn--lrg btn-dark br-28" type="submit">Get on the list</button>
+      </label>
+    </form>
   </div>
 
   <footer class="footer-bg footer-bg--signup"></footer>

@@ -48,7 +48,9 @@
 
     .countdown-card {
       background-color: var(--clr-headers);
-      padding: 0.6875rem 1.125rem;
+      padding-top: 0.6875rem;
+      width: clamp(72px, 12vw, 100px);
+      height: clamp(92px, 12vw, 128px);
      
       &__num {
         font-weight: 700;
@@ -64,18 +66,12 @@
         font-size: clamp(0.75rem, 2vw, 1rem);
         opacity: 0.5;
 
-        &--dark {
-          color: var(--clr-headers);
-        }
+        &--dark {color: var(--clr-headers);}
       }
     }
 
-    .countdown-card--light {
-      background-color: var(--clr-accent-opac);
-    }
+    .countdown-card--light {background-color: var(--clr-accent-opac);}
   }
-
-
 }
 
 .countdown--signup {
