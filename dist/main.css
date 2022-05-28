@@ -213,8 +213,8 @@ a:active {
 }
 @media screen and (min-width: 75em) {
   .countdown {
-    padding-top: 24.8125rem;
-    padding-bottom: 1.5rem;
+    padding-top: 19.125rem;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 75em) {
@@ -564,6 +564,7 @@ body {
     background-position-y: -603px;
     background-position-x: -789px;
     transform: translateY(350px);
+    height: 603px;
   }
 }
 .footer-bg--signup {
