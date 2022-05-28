@@ -7,23 +7,19 @@
   background-position-y: 16rem;
   background-position-x: center;
   background-color: var(--clr-dark);
-  position: relative;
-  height: 79rem;
-  margin-top: -859px;
+  margin-top: -865px;
 
   @include mix.breakpoint(med) {
     background-size: 200%;
     background-position-y: 1.625rem;
-    height: 61.625rem;
-    margin-top: -694px;
+    margin-top: -688px;
   }
 
   @include mix.breakpoint(lrg) {
     background-size: 151%;
     background-position-y: -603px;
     background-position-x: -789px;
-    height: 37.6875rem;
-    margin-top: -339px
+    margin-top: -400px;
   }
 
   &--signup {
@@ -49,6 +45,8 @@
       z-index: -500;
     }
 
-    @include mix.breakpoint(xl) {background: none;}
+    @include mix.breakpoint(xl) {
+      background: none;
+    }
   }
 }

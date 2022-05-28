@@ -548,16 +548,13 @@ body {
   background-position-y: 16rem;
   background-position-x: center;
   background-color: var(--clr-dark);
-  position: relative;
-  height: 79rem;
-  margin-top: -859px;
+  margin-top: -865px;
 }
 @media screen and (min-width: 48em) {
   .footer-bg {
     background-size: 200%;
     background-position-y: 1.625rem;
-    height: 61.625rem;
-    margin-top: -694px;
+    margin-top: -688px;
   }
 }
 @media screen and (min-width: 75em) {
@@ -565,8 +562,7 @@ body {
     background-size: 151%;
     background-position-y: -603px;
     background-position-x: -789px;
-    height: 37.6875rem;
-    margin-top: -339px;
+    margin-top: -400px;
   }
 }
 .footer-bg--signup {
