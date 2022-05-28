@@ -8,8 +8,6 @@
   background-position-x: center;
   background-color: var(--clr-dark);
   margin-top: -865px;
-  height: 603px;
-  // height: 100vh;
 
   @include mix.breakpoint(med) {
     background-size: 200%;
@@ -18,9 +16,9 @@
   }
 
   @include mix.breakpoint(lrg) {
-    background-size: 149%;
-    background-position-y: -664px;
-    background-position-x: -743px;
+    background-size: 130%;
+    background-position-y: -592px;
+    background-position-x: -611px;
     margin-top: -260px;
   }
 
@@ -47,8 +45,6 @@
       z-index: -500;
     }
 
-    @include mix.breakpoint(xl) {
-      background: none;
-    }
+    @include mix.breakpoint(xl) {background: none;}
   }
 }
