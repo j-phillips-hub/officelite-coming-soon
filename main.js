@@ -62,7 +62,6 @@ for (const elm of selected) {
   });
 }
 
-const phone = document.getElementById('phone');
 const form = document.getElementById('form');
 const email = document.getElementById('email');
 const emailErr = document.getElementById('emailErr');
