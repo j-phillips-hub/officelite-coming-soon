@@ -8,6 +8,7 @@
   background-position-x: center;
   background-color: var(--clr-dark);
   margin-top: -865px;
+  height: 100vh;
 
   @include mix.breakpoint(med) {
     background-size: 200%;

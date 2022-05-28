@@ -550,6 +550,7 @@ body {
   background-position-x: center;
   background-color: var(--clr-dark);
   margin-top: -865px;
+  height: 100vh;
 }
 @media screen and (min-width: 48em) {
   .footer-bg {
