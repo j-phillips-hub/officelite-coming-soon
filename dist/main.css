@@ -200,21 +200,20 @@ a:active {
 }
 
 .countdown {
+  position: relative;
+  bottom: -882px;
   max-width: 1265px;
   text-align: center;
-  padding-top: 56.6875rem;
-  padding-bottom: 6.25rem;
   margin: 0 auto;
 }
 @media screen and (min-width: 48em) {
   .countdown {
-    padding-top: 40.9375rem;
+    bottom: -643px;
   }
 }
 @media screen and (min-width: 75em) {
   .countdown {
-    padding-top: 19.125rem;
-    padding-bottom: 0;
+    bottom: -307px;
   }
 }
 @media screen and (min-width: 75em) {
@@ -549,13 +548,16 @@ body {
   background-position-y: 16rem;
   background-position-x: center;
   background-color: var(--clr-dark);
-  margin-top: -865px;
+  position: relative;
+  height: 79rem;
+  margin-top: -859px;
 }
 @media screen and (min-width: 48em) {
   .footer-bg {
     background-size: 200%;
     background-position-y: 1.625rem;
-    margin-top: -688px;
+    height: 61.625rem;
+    margin-top: -694px;
   }
 }
 @media screen and (min-width: 75em) {
@@ -563,7 +565,8 @@ body {
     background-size: 151%;
     background-position-y: -603px;
     background-position-x: -789px;
-    transform: translateY(350px);
+    height: 37.6875rem;
+    margin-top: -339px;
   }
 }
 .footer-bg--signup {

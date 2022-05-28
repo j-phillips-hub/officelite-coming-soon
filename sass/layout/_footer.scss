@@ -7,22 +7,23 @@
   background-position-y: 16rem;
   background-position-x: center;
   background-color: var(--clr-dark);
-  margin-top: -865px;
+  position: relative;
+  height: 79rem;
+  margin-top: -859px;
 
   @include mix.breakpoint(med) {
     background-size: 200%;
     background-position-y: 1.625rem;
-    margin-top: -688px;
+    height: 61.625rem;
+    margin-top: -694px;
   }
 
   @include mix.breakpoint(lrg) {
     background-size: 151%;
     background-position-y: -603px;
     background-position-x: -789px;
-    transform: translateY(350px);
-    // margin-top: -400px;
-    // height: 100vh;
-    // height: 603px;
+    height: 37.6875rem;
+    margin-top: -339px
   }
 
   &--signup {
@@ -48,8 +49,6 @@
       z-index: -500;
     }
 
-    @include mix.breakpoint(xl) {
-      background: none;
-    }
+    @include mix.breakpoint(xl) {background: none;}
   }
 }
