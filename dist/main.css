@@ -70,6 +70,7 @@ button {
   /* IE9 Compat Modes */
   src: local(""), url("../assets/fonts/kumbh-sans-v11-latin-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/kumbh-sans-v11-latin-regular.woff2") format("woff2"), url("../assets/fonts/kumbh-sans-v11-latin-regular.woff") format("woff"), url("../assets/fonts/kumbh-sans-v11-latin-regular.ttf") format("truetype"), url("../assets/fonts/kumbh-sans-v11-latin-regular.svg#KumbhSans") format("svg");
   /* Legacy iOS */
+  font-display: swap;
 }
 /* kumbh-sans-700 - latin */
 @font-face {
@@ -80,6 +81,7 @@ button {
   /* IE9 Compat Modes */
   src: local(""), url("../assets/fonts/kumbh-sans-v11-latin-700.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/kumbh-sans-v11-latin-700.woff2") format("woff2"), url("../assets/fonts/kumbh-sans-v11-latin-700.woff") format("woff"), url("../assets/fonts/kumbh-sans-v11-latin-700.ttf") format("truetype"), url("../assets/fonts/kumbh-sans-v11-latin-700.svg#KumbhSans") format("svg");
   /* Legacy iOS */
+  font-display: swap;
 }
 h1,
 h2,
@@ -452,6 +454,7 @@ body {
 }
 .header__grid-graph {
   width: 50%;
+  height: auto;
   margin-top: 5rem;
 }
 @media screen and (min-width: 48em) {
