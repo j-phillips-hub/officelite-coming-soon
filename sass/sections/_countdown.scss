@@ -1,15 +1,18 @@
 @use '../layout/breakpoints' as mix;
 
 .countdown {
-  position: relative;
-  bottom: -882px;
   max-width: 1265px;
   text-align: center;
+  padding-top: 56.6875rem;
+  padding-bottom: 6.25rem;
   margin: 0 auto;
 
-  @include mix.breakpoint(med) {bottom: -643px;}
+  @include mix.breakpoint(med) {padding-top: 40.9375rem;}
 
-  @include mix.breakpoint(lrg) {bottom: -307px;}
+  @include mix.breakpoint(lrg) {
+    padding-top: 24.8125rem;
+    padding-bottom: 1.5rem;
+  }
 
   &__flex {
     @include mix.breakpoint(lrg) {

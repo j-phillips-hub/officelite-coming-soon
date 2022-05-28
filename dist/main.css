@@ -200,20 +200,21 @@ a:active {
 }
 
 .countdown {
-  position: relative;
-  bottom: -882px;
   max-width: 1265px;
   text-align: center;
+  padding-top: 56.6875rem;
+  padding-bottom: 6.25rem;
   margin: 0 auto;
 }
 @media screen and (min-width: 48em) {
   .countdown {
-    bottom: -643px;
+    padding-top: 40.9375rem;
   }
 }
 @media screen and (min-width: 75em) {
   .countdown {
-    bottom: -307px;
+    padding-top: 24.8125rem;
+    padding-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 75em) {
