@@ -1,17 +1,14 @@
-# Frontend Mentor - Officelite coming soon page
+# Officelite coming soon page
 
 This is a solution to the [Officelite coming soon site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g)
 
 ## Table of contents
 
-- [Overview](#overview)
 - [The challenge](#the-challenge)
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [Built with](#built-with)
 - [Author](#author)
-
-## Overview
 
 ### The challenge
 
@@ -38,9 +35,6 @@ Users should be able to:
 - HTML5
 - SCSS
 - JavaScript
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
 
 ## Author
 
