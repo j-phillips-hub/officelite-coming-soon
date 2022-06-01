@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Built with
 
-- HTML5
+- HTML
 - SCSS
 - JavaScript
 
