@@ -1,5 +1,5 @@
 
-const countDownDate = new Date('November 04, 2022 00:00:00').getTime(); // End Date
+const countDownDate = new Date('January 01, 2024 00:00:00').getTime(); // End Date
 const daysLeft = document.getElementById('daysLeft');
 const hoursLeft = document.getElementById('hoursLeft');
 const minLeft = document.getElementById('minLeft');
@@ -39,7 +39,7 @@ const pro = document.getElementById('proImg');
 const ult = document.getElementById('ultimateImg');
 
 for (const elm of selected) {
-  elm.addEventListener('click', function() {
+  elm.addEventListener('click', function () {
     const modalId = this.dataset.selected;
     const modalImg = document.getElementById(modalId).firstElementChild;
     const inner = document.getElementById(modalId).innerText;
@@ -54,7 +54,7 @@ for (const elm of selected) {
     } else if (modalImg.classList.contains('pro')) {
       basic.classList.remove('modal-option__img--show');
       ult.classList.remove('modal-option__img--show');
-      
+
     } else if (modalImg.classList.contains('ultimate')) {
       pro.classList.remove('modal-option__img--show');
       basic.classList.remove('modal-option__img--show');
@@ -100,7 +100,7 @@ email.addEventListener('keyup', () => {
 });
 
 form.addEventListener('submit', (e) => {
-  if(email.value === '' || !email.value.match(regX)) {
+  if (email.value === '' || !email.value.match(regX)) {
     addErr();
     e.preventDefault();
   }
