@@ -19,7 +19,7 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 img,
@@ -68,7 +68,14 @@ button {
   font-weight: 400;
   src: url("../assets/fonts/kumbh-sans-v11-latin-regular.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../assets/fonts/kumbh-sans-v11-latin-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/kumbh-sans-v11-latin-regular.woff2") format("woff2"), url("../assets/fonts/kumbh-sans-v11-latin-regular.woff") format("woff"), url("../assets/fonts/kumbh-sans-v11-latin-regular.ttf") format("truetype"), url("../assets/fonts/kumbh-sans-v11-latin-regular.svg#KumbhSans") format("svg");
+  src: local(""),
+    url("../assets/fonts/kumbh-sans-v11-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/kumbh-sans-v11-latin-regular.woff2") format("woff2"),
+    url("../assets/fonts/kumbh-sans-v11-latin-regular.woff") format("woff"),
+    url("../assets/fonts/kumbh-sans-v11-latin-regular.ttf") format("truetype"),
+    url("../assets/fonts/kumbh-sans-v11-latin-regular.svg#KumbhSans")
+      format("svg");
   /* Legacy iOS */
   font-display: swap;
 }
@@ -79,7 +86,13 @@ button {
   font-weight: 700;
   src: url("../assets/fonts/kumbh-sans-v11-latin-700.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../assets/fonts/kumbh-sans-v11-latin-700.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/kumbh-sans-v11-latin-700.woff2") format("woff2"), url("../assets/fonts/kumbh-sans-v11-latin-700.woff") format("woff"), url("../assets/fonts/kumbh-sans-v11-latin-700.ttf") format("truetype"), url("../assets/fonts/kumbh-sans-v11-latin-700.svg#KumbhSans") format("svg");
+  src: local(""),
+    url("../assets/fonts/kumbh-sans-v11-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/kumbh-sans-v11-latin-700.woff2") format("woff2"),
+    url("../assets/fonts/kumbh-sans-v11-latin-700.woff") format("woff"),
+    url("../assets/fonts/kumbh-sans-v11-latin-700.ttf") format("truetype"),
+    url("../assets/fonts/kumbh-sans-v11-latin-700.svg#KumbhSans") format("svg");
   /* Legacy iOS */
   font-display: swap;
 }
@@ -259,7 +272,7 @@ a:active {
 }
 .countdown .countdown-card-wrapper .countdown-card__num {
   font-weight: 700;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 2.6rem);
   color: var(--clr-white);
 }
 .countdown .countdown-card-wrapper .countdown-card__num--dark {
@@ -686,4 +699,4 @@ body {
 
 .btn--lrg {
   padding: 0.875rem 0;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
